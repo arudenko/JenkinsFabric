@@ -1,0 +1,25 @@
+- job:
+    name: ReactJS
+    project-type: freestyle
+    scm:
+        - git:
+            url: https://github.com/arudenko/ReactjsUnitTest.git
+            branches:
+              - master
+            browser: githubweb
+            browser-url: https://github.com/arudenko/ReactjsUnitTest
+            skip-tag: true
+            wipe-workspace: false
+    builders:
+      - shell: "npm install"
+      - shell: "rm -f func_tests/screenshots/*.png"
+      - shell: "./run-tests.sh"
+
+    triggers:
+      - pollscm: 'H/3 * * * *'
+    publishers:
+      - junit:
+          results: func_tests/reports/*.xml
+      - archive:
+          artifacts: 'func_tests/screenshots/*.png'
+          allow-empty: 'true'

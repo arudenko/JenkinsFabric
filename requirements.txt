@@ -1,0 +1,7 @@
+fabric
+fabtools
+jenkinsapi
+PyYAML
+pbr
+wtframework
+nose
