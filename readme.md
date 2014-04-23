@@ -14,12 +14,12 @@ This shows how to create simple Jenkins instance. This instance will have:
 - Selenium Framework ([WTFramework](https://github.com/wiredrive/wtframework))
 - Headless Chrome and Firefox for functional tests
 - Virtual display
-- pre-configured job to build and test project from [https://github.com/arudenko/ReactjsUnitTest](https://github.com/arudenko/ReactjsUnitTest)
--- checkout source code
--- build single page application
--- run Jasmine unit tests
--- deploy to local Nginx
--- run Selenium tests. If failed -- take a screenshot and attach to build
+- Pre-configured job to build and test project from [https://github.com/arudenko/ReactjsUnitTest](https://github.com/arudenko/ReactjsUnitTest)
+    - checkout source code
+    - build single page application
+    - run Jasmine unit tests
+    - deploy to local Nginx
+    - run Selenium tests. If failed -- take a screenshot and attach to build
 
 
 This setup works perfectly on small instance on [DigitalOcean](https://www.digitalocean.com/?refcode=8e25ea701943)
@@ -39,6 +39,7 @@ This setup works perfectly on small instance on [DigitalOcean](https://www.digit
 Open [http://88.88.88.88:8080/](http://88.88.88.88:8080/) in browser
 
 Login: jenkins_user
+
 Password: SomeStrongPassword
 
 
