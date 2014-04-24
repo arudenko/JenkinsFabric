@@ -81,9 +81,13 @@ def configure_jenkins():
     if not exists('/etc/jenkins/ssl'):
         sudo('mkdir /etc/jenkins/ssl')
 
-    # TODO Define file names properly
-    put("etc/ab_server.crt", "/etc/jenkins/ssl/ab_server.crt", use_sudo=True)
-    put("etc/ab_server.key", "/etc/jenkins/ssl/ab_server.key", use_sudo=True)
+    put("etc/%s.crt" % env.jenkins_cert_name,
+        "/etc/jenkins/ssl/%s.crt" % env.jenkins_cert_name,
+        use_sudo=True)
+
+    put("etc/%s.key" % env.jenkins_cert_name,
+        "/etc/jenkins/ssl/%s.key" % env.jenkins_cert_name,
+        use_sudo=True)
 
     # Install git plugin
     #run("wget http://localhost:8080/jnlpJars/jenkins-cli.jar")
