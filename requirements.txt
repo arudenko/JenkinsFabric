@@ -2,6 +2,6 @@ fabric
 fabtools
 jenkinsapi
 PyYAML
-pbr
+pbr==0.8.2
 wtframework
 nose
