@@ -8,7 +8,7 @@ This shows how to create simple Jenkins instance. This instance will have:
 - Node/npm for JS packages
 - [Karma](http://karma-runner.github.io/) as a runner for Unit Tests:
     `npm install -g karma`
-- [Jasmine](http://pivotal.github.io/jasmine/) as Unit Test framework
+- [Jasmine](https://jasmine.github.io/) as Unit Test framework
 - [Grunt](http://gruntjs.com/) as build tool
 - Nginx to run static website 
 - Selenium Framework ([WTFramework](https://github.com/wiredrive/wtframework))
